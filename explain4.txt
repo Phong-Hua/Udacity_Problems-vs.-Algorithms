@@ -1,0 +1,2 @@
+The solution, only traverses through the list once, so time complexity is O(n).
+This is inplace sorted, no extra data space is used except variables to keep track of indexes. So, space complexity is O(1)

@@ -1,0 +1,24 @@
+The solution get use of merge_sort() algorithm and create_numbers() function.
+With merge_sort algorithm, the time complexity depends on number_of_comparisons_per_iteration * number_of_iterations.
+    1. number_of_comparisons_per_iteration depends on number_of_elements at each iteration.
+        If 1 element => 0 comparisons.
+        If 2 elements => 1 comparisons.
+        If 3 elements => 2 comparisons.
+        ..........
+        If n elements => n-1 comparisons.
+    2. number_of_iterations, depends on size of array.
+        If 1 element => 0 iteration.
+        If 2 elements => 1 iteration.
+        If 3,4 elements => 2 iterations.
+        If 5 - 8 elements => 3 iterations.
+        ..........
+        If n elements => log2(n) iterations.
+Time complexity of merge_sort is O(n log n).
+About Space complexity, the merge sort is not an in-place sort method. At the merge() function, a new array is created with has the size
+equal to total of two array inputs (left and right). With all arrays created are discarded at the end, except the final array which has 
+final result, the space complexity is O(n).
+
+With create_numbers(), time complexity is O(n) and space complexity is also O(n).
+
+So, time complexity of solution is O(n log n) + O(n), which is O(n), linear complexity.
+Total Space complexity is O(n) + O(n) which is O(n), linear complexity.

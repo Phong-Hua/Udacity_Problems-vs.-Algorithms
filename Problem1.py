@@ -12,16 +12,49 @@ Here is some boilerplate code and test cases to start with:
 """
 
 def sqrt(number):
-    """
-    Calculate the floored square root of a number
+   """
+   Calculate the floored square root of a number
 
     Args:
        number(int): Number to find the floored squared root
     Returns:
        int: Floored Square Root
-    """
-    pass
+   """
+   
 
+   def binary_search(target, start, end):
+      """
+      Using binary search, and find a number within range(start, from) satisfy number**2 = target.
+      """
+      if start is None or end is None or start > end:
+         return None
+      center = (start + end) // 2
+      center_square = center**2
+      
+      if center_square == target:
+         return center
+      elif center_square < target:  
+         center_next_square = (center+1)**2
+         if center_next_square > target:
+            return center
+         else:
+            return binary_search(target, center+1, end)
+      else:
+         return binary_search(target, start, center)
+      
+
+
+
+   if number == None or type(number) is not int or number < 0:
+      return None
+   if number < 2:
+      return number
+
+   return binary_search(number, 0, number)
+
+print ("Pass" if  (None == sqrt(None)) else "Fail")
+print ("Pass" if  (None == sqrt('Hello')) else "Fail")
+print ("Pass" if  (None == sqrt(-1)) else "Fail")
 print ("Pass" if  (3 == sqrt(9)) else "Fail")
 print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
