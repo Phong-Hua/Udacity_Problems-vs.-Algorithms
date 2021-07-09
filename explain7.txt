@@ -1,0 +1,29 @@
+Time and space complexity of all classes and its method:
+    1. RouteTrieNode:
+        a. insert(): O(1) for time complexity and space complexity.
+        b. insert_handler(): O(1) for time complexity and space complexity.
+        c. get_node(): O(1) for time complexity and space complexity.
+        d. get_handler(): O(1) for time complexity and space complexity.
+        
+        *** Space complexity: children is a dictionary that reference to other nodes.
+        For worstcase, space complexity can be O(n) if it is the root node. 
+
+    2. RouteTrie:
+        a. get_root_handler(): O(1) for time complexity and space complexity.
+        b. insert_root_handler(): O(1) for time complexity and space complexity.
+        c. insert_404(): O(1) for time complexity and space complexity.
+        d. get_404(): O(1) for time complexity and space complexity.
+        e. insert(): Time complexity for this methods depends on path and size of array it
+        can a path be split into. Since the path is limit, I would say time complexity is O(1).
+        Space complexity is O(1).
+        f. find(): Time complexity depends on size of parts array. Since, size of parts is limited,
+        I would say time complexity is O(1). Space complexity is O(1).
+
+        *** Space complexity is O(n), with n is total size of node.
+
+    3. Router:
+        a. add_handler(): time complexity is O(1) since http path is limited. Space complexity is O(1).
+        b. lookup(): time complexity is O(1) since http path is limited. Space complexity is O(1).
+        c. __split_path__(): time and space complexity is O(1) since http path is limited.
+
+

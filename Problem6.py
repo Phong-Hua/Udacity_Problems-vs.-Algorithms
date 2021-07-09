@@ -35,9 +35,40 @@ def get_min_max(ints):
 ## Example Test Case of Ten Integers
 import random
 
-l = [i for i in range(0, 10)]  # a list containing 0 - 9
-random.shuffle(l)
+
+def test_normal_cases():
+    
+    l = [i for i in range(0, 10)]  # a list containing 0 - 9
+    
+    random.shuffle(l)
+    
+    print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
+
+def test_edge_cases():
+    """
+    Testing edge cases: with None or empty list
+    """
+
+    print("************Edge case: Input list is None************")
+    arr_1 = None
+    print ("Pass" if ((None, None) == get_min_max(arr_1)) else "Fail")
+
+    print("************Edge case: Input list is []************")
+    arr_2 = []
+    print ("Pass" if ((None, None) == get_min_max(arr_2)) else "Fail")
+
+    print("************Edge case: Input list has only one number************")
+    arr_3 = [1]
+    print ("Pass" if ((1, 1) == get_min_max(arr_3)) else "Fail")
+
+    print("************Edge case: Input list has only one type of digit************")
+    arr_4 = [2, 2, 2, 2]
+    print ("Pass" if ((2, 2) == get_min_max(arr_4)) else "Fail")
+
+    print("************Edge case: Input list has None element************")
+    arr_5 = [None, 2, 4, 6, 3, 1]
+    print ("Pass" if ((1, 6) == get_min_max(arr_5)) else "Fail")
 
 
-print ("Pass" if ((0, 9) == get_min_max(l)) else "Fail")
-
+test_normal_cases();
+test_edge_cases();
