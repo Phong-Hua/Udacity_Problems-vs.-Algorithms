@@ -20,9 +20,9 @@ def sqrt(number):
     Returns:
        int: Floored Square Root
    """
-   
 
    def binary_search(target, start, end):
+
       """
       Using binary search, and find a number within range(start, from) satisfy number**2 = target.
       """
@@ -49,8 +49,8 @@ def sqrt(number):
       return None
    if number < 2:
       return number
-
-   return binary_search(number, 0, number)
+   result = binary_search(number, 0, number)
+   return result
 
 print ("Pass" if  (None == sqrt(None)) else "Fail")
 print ("Pass" if  (None == sqrt('Hello')) else "Fail")
@@ -60,3 +60,6 @@ print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+# Testing with big number
+print ("Pass" if  (519 == sqrt(270000)) else "Fail")
+print ("Pass" if  (31622 == sqrt(999999999)) else "Fail")
