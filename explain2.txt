@@ -1,7 +1,0 @@
-In the solution, 
-First it needs to find pivot index in input_list, this is done by using binary search find_pivot_index() and time complexity for this function is O(log n).
-Then, it will find the target whether from start of input_list to pivot, or from pivot to end of input_list. 
-The find_target_index() function will response for that. This function is implemented using binary search with time complexity is O(log n).
-Hence, the total time complexity of this solution is O (log n).
-
-About space complexity, except a variable to hold value of pivot index, no extra data structure is used, so space complexity is O(1).

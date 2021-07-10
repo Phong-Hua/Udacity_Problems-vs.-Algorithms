@@ -1,2 +1,0 @@
-We use binary search to find floor value of sqrt of number, so time complexity of this solution is O(log n).
-We don't use extra space, so space complexity is O(1).
